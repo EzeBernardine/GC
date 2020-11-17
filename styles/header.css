@@ -1,0 +1,389 @@
+.main-menu {
+  background: #24292e;
+  padding: 16px 32px;
+}
+
+.menuicon-main {
+  display: none;
+}
+
+.github-logo {
+  margin-right: 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.github-logo:hover .pictureFrame {
+  background: hsla(0, 100%, 99.8%, 0.7);
+}
+.github-logo .pictureFrame {
+  height: 33px;
+  width: 33px;
+}
+.profile-details .repo-details-container {
+  margin-right: 16px;
+  height: 23px;
+}
+.profile-details .repo-details-container .dropdownModalBox {
+  height: 100%;
+}
+.profile-details .repo-details-container .click {
+  border: none;
+  padding: 0;
+  height: 100%;
+}
+/* .profile-details .repo-details-container #details-modal-section {
+ display: block
+} */
+.profile-details .repo-details-container .click:hover {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+.cross {
+  position: relative;
+  width: 12px;
+}
+.cross:before,
+.cross:after {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 2px;
+  right: 0;
+  left: 0;
+  top: -2px;
+  background: #9ba7b3;
+  bottom: 0;
+  margin: auto;
+}
+.profile-details
+  .repo-details-container
+  > .dropdownModalBox
+  .click
+  .selectedText
+  .cross:before {
+  transform: rotate(90deg) !important;
+}
+.profile-details > .profile-details-container > .dropdownModalBox > .click,
+.profile-details
+  > .profile-details-container
+  > .dropdownModalBox
+  > .click:hover {
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+}
+.profile-details-container .details-modal-section {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.profile-details-container .details-modal-section > * {
+  border-top: 1px solid #e1e4e8;
+  padding: 8px 0;
+}
+.profile-details-container .details-modal-section > *:last-child {
+  border-top: none;
+  padding: 4px 8px 4px 16px;
+  text-align: start;
+  cursor: pointer;
+}
+
+.profile-details-container .click .selectedText {
+  padding-right: 3px;
+}
+.profile-details-container .click .selectedText .pictureFrame {
+  width: 20px;
+  height: 20px;
+}
+.profile-details .notification-main {
+  position: relative;
+  margin-right: 16px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.profile-details
+  .notification-main:hover
+  .notification-container
+  .notification-icon {
+  border-color: hsla(0, 100%, 99.8%, 0.7);
+}
+.profile-details
+  .notification-main:hover
+  .notification-container
+  .notification-icon:before {
+  border-bottom-color: hsla(0, 100%, 99.8%, 0.7);
+}
+.profile-details
+  .notification-main:hover
+  .notification-container
+  .notification-icon
+  .notification-drop {
+  border-top-color: hsla(0, 100%, 99.8%, 0.7);
+}
+.profile-details .notification-main .notification-container .notification-icon {
+  height: 13px;
+  width: 11px;
+  border: 1px solid white;
+  border-radius: 50% 50% 0 0;
+  position: relative;
+}
+.profile-details
+  .notification-main
+  .notification-container
+  .notification-icon:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 11px;
+  height: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 7px;
+  border-bottom-color: white;
+  border-right: 4px solid transparent;
+  border-top: 0 solid transparent;
+  border-left: 4px solid transparent;
+  right: 0;
+  left: -4px;
+  bottom: -5px;
+  margin: 0;
+  border-radius: 4px;
+}
+.profile-details
+  .notification-main
+  .notification-container
+  .notification-icon:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 9px;
+  height: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 7px;
+  border-bottom-color: #24292e;
+  border-right: 2px solid transparent;
+  border-top: 0 solid transparent;
+  border-left: 2px solid transparent;
+  right: 0;
+  left: -0.7px;
+  bottom: -4px;
+  margin: 0;
+  border-radius: 4px;
+}
+
+.profile-details
+  .notification-main
+  .notification-container
+  .notification-icon
+  .notification-drop {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: white;
+  border-right: 3px solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 3px solid transparent;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  bottom: -9px;
+  margin: auto;
+}
+.profile-details .notification-main .notification-container .notification {
+  position: absolute;
+  padding: 5px;
+  background: #0366d7;
+  border-radius: 50%;
+  border: 2px solid #24292e;
+  top: -3px;
+  right: -3px;
+}
+
+.search-and-items {
+  margin-right: 16px;
+  flex: 1;
+  justify-content: flex-start !important;
+  flex-wrap: nowrap !important;
+}
+.search-and-items form {
+  max-width: 272px;
+  width: 100%;
+  margin-right: 16px;
+}
+.search-and-items form .searchbar {
+  border: 1px solid #495159;
+  min-height: 28px;
+  border-radius: 6px;
+  padding: 0px 8px 0 12px;
+}
+.search-and-items form .searchbar input {
+  padding: 0 12px 0 0;
+  background: transparent;
+  color: #fff;
+  flex: 1;
+  font-size: 14px;
+  line-height: 20px;
+}
+.search-and-items form .searchbar input:active,
+.search-and-items form .searchbar input:focus {
+  background: white;
+}
+.search-and-items form .searchbar .search-click-icon {
+  border: 1px solid #495159;
+  padding: 8px 7px;
+  border-radius: 4px;
+  position: relative;
+}
+.search-and-items form .searchbar .search-click-icon::after {
+  position: absolute;
+  width: 1px;
+  height: 8px;
+  background: #5d666f;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  content: "";
+  margin: auto;
+  transform: rotate(25deg);
+}
+
+.search-and-items nav {
+  width: max-content;
+}
+.search-and-items nav ul {
+  display: inline-flex;
+}
+.search-and-items nav ul li {
+  list-style-type: none;
+  margin-right: 16px;
+  line-height: 1.5;
+}
+.search-and-items nav ul .iterate-link .flex {
+  justify-content: flex-start;
+}
+.search-and-items nav ul .iterate-link .sign-out-logo {
+  width: 4px;
+  height: 12px;
+  border: 2px solid white;
+  border-right: none;
+  position: relative;
+  border-radius: 2px;
+  margin-right: 15px;
+}
+.search-and-items nav ul .iterate-link .sign-out-logo::before {
+  width: 7px;
+  height: 2px;
+  background: white;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -8px;
+  border-radius: 2px;
+  margin: auto;
+}
+.search-and-items nav ul .iterate-link .sign-out-logo::after {
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+  content: "";
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 2px;
+  right: -10px;
+  margin: auto;
+}
+.search-and-items nav ul li a:hover .sign-out-logo,
+.search-and-items nav ul li a:hover .sign-out-logo:after {
+  border-color: hsla(0, 100%, 99.8%, 0.7) !important;
+}
+.search-and-items nav ul li a:hover .sign-out-logo:before {
+  background: hsla(0, 100%, 99.8%, 0.7) !important;
+}
+.search-and-items nav ul .iterate-link a .pictureFrame {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}
+.search-and-items nav ul li a {
+  color: white;
+  font-size: 16px;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 14px;
+}
+@media (min-width: 765px) {
+  .search-and-items nav ul .iterate-link {
+    display: none;
+  }
+}
+.search-and-items nav ul li a:hover {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+/* within 765px screen size */
+@media (max-width: 1010px) and (min-width: 765px) {
+  .request {
+    display: none;
+  }
+}
+@media (max-width: 765px) {
+  #main-menu-sm {
+    padding: 16px;
+    justify-content: space-between !important;
+  }
+  .menuicon-main {
+    display: block !important;
+  }
+
+  .search-and-items {
+    display: none !important;
+    order: 4;
+    min-width: 100%;
+    margin-top: 16px;
+    flex-wrap: wrap !important;
+  }
+  .search-and-items-show {
+    display: block !important;
+  }
+  .search-and-items form {
+    margin-bottom: 16px;
+    min-width: 100%;
+  }
+  .search-and-items nav,
+  .search-and-items ul,
+  .search-and-items ul li {
+    min-width: 100%;
+  }
+  .search-and-items ul {
+    flex-direction: column;
+  }
+  .search-and-items ul li {
+    margin: 0;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.14) !important;
+    text-align: start;
+  }
+  .search-and-items ul li a {
+    min-width: 100%;
+    padding: 8px 0;
+    display: inline-block;
+  }
+  .repo-details-container,
+  .profile-details-container {
+    display: none !important;
+  }
+  .profile-details .notification-main,
+  .github-logo {
+    margin: 0 !important;
+  }
+}

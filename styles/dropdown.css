@@ -1,0 +1,135 @@
+
+/* general styles for all dropdowns */
+.dropdownModalBox {
+  position: relative;
+  width: max-content;
+  min-width: max-content;
+}
+.dropdownModalBox > .click {
+  cursor: pointer;
+  padding: 5px 13px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  transition: 250ms ease-in-out;
+  /* border: 1px solid #e3e5ea; */
+}
+.dropdownModalBox > .click span {
+  color: #777;
+  font-size: 13px;
+  font-weight: auto;
+  opacity: 0.8;
+  padding-right: 8px;
+}
+.dropdownModalBox > .click .dropdown-icon {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top-style: solid;
+  border-top-width: 4px;
+  border-top-color: white;
+  border-right: 4px solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 4px solid transparent;
+}
+.dropdownModalBox > .click:hover .dropdown-icon {
+  border-top-color: hsla(0, 100%, 99.8%, 0.7);
+}
+.dropdownModalBox > .click:hover {
+  border: 1px solid #dbdbdb;
+  box-shadow: 1px 3px 9px -6px #0003;
+  background: #e3e3e3;
+}
+.dropdownModalBox > .click:hover > span {
+  opacity: 1;
+}
+.dropdownModalBox > section {
+  position: absolute;
+  z-index: 10009;
+  top: 130%;
+  border: 1px solid #e1e4e8;
+  right: 0;
+  left: auto;
+  margin: 2px auto 0;
+  padding: 5px 0;
+  font-size: 14px;
+  min-width: 160px;
+  max-width: 180px;
+  width: max-content;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  border-radius: 6px;
+  background-clip: padding-box;
+  background-color: #fff;
+}
+.dropdownModalBox > section .arrow{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 10px;
+  border-bottom-color: white;
+  border-right: 10px solid transparent;
+  border-top: 0 solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -8px;
+  right: 10px;
+  padding: 0;
+  border-radius: 5px;
+}
+/* .dropdownModalBox > section .modal-divider {
+  border-top: 1px solid #e1e4e8;
+  margin: 8px 0;
+} */
+
+.dropdownModalBox > section ul li {
+  list-style: none;
+  cursor: pointer;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  text-align: left;
+  height: 100%;
+  margin: 0 0px;
+  position: relative;
+  font-size: 14px;
+  color: #24292e;
+  min-height: unset;
+  display: flex;
+  padding: 4px 8px 4px 16px;
+}
+.dropdownModalBox > section ul li .modalIcon {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdownModalBox > section ul li .modalText {
+  height: 100%;
+  flex: 1;
+}
+.dropdownModalBox > section ul li:hover {
+  box-shadow: 0 12px 20px -10px rgba(156, 39, 176, 0.28),
+    0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
+  background-color: #0366d6;
+  color: white;
+}
+.dropdownModalBox > section ul li:hover span {
+  color: #fff !important;
+}
+.dropdownModalBox > section ul li span {
+  color: #333;
+  font-size: 13px;
+}
+
+.dropdownModalBox > .overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10008;
+  cursor: auto;
+  /* background: red; */
+}

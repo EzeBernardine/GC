@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./iconStyles/menuicon.css" />
+    <link rel="stylesheet" href="./styles/box.css" />
+    <link rel="stylesheet" href="./styles/dropdown.css" />
+    <link rel="stylesheet" href="./styles/tabs.css" />
+    <link rel="stylesheet" href="./styles/profile.css" />
+    <link rel="stylesheet" href="./styles/repos.css" />
+    <link rel="stylesheet" href="./iconStyles/repositroryIcon.css" />
+    <link rel="stylesheet" href="./iconStyles/projectIcon.css" />
+    <link rel="stylesheet" href="./iconStyles/overviewIcon.css" />
+    <link rel="stylesheet" href="./iconStyles/companyIcon.css" />
+    <link rel="stylesheet" href="./iconStyles/locationIcon.css" />
+    <link rel="stylesheet" href="./iconStyles/followersIcon.css" />
+  </head>
+  <body>
+    <header>
+      <div class="main-menu flex" id="main-menu-sm">
+        <div class="menuicon-main">
+          <button>
+            <div class="menuIcon-container">
+              <div class="menuIcon-div" />
+            </div>
+          </button>
+        </div>
+
+        <div class="github-logo">
+          <div class="pictureFrame">
+            <img src="./assets/github.png" alt="" />
+          </div>
+        </div>
+
+        <div class="flex search-and-items">
+          <form>
+            <div class="flex searchbar">
+              <input
+                type="text"
+                placeholder="Search or jump to..."
+                id="searchbar"
+              />
+              <div class="search-click-icon"></div>
+            </div>
+          </form>
+          <nav>
+            <ul>
+              <li class="iterate-link">
+                <a href="/"> Dashbaord </a>
+              </li>
+              <li>
+                <a href="/"> Pull <span class="request">requests</span> </a>
+              </li>
+              <li>
+                <a href="/"> Issues </a>
+              </li>
+              <li>
+                <a href="/"> Marketplace </a>
+              </li>
+              <li>
+                <a href="/"> Explore </a>
+              </li>
+              <li class="iterate-link">
+                <a href="/">
+                  <div class="flex">
+                    <div class="pictureFrame">
+                      <img src="./assets/me.jpg" alt="" />
+                    </div>
+                    EzeBernardine
+                  </div>
+                </a>
+              </li>
+              <li class="iterate-link">
+                <a href="/">
+                  <div class="flex">
+                    <div class="sign-out-logo"></div>
+                    Sign out
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="flex profile-details">
+          <div class="notification-main">
+            <a href="/" class="notification-container">
+              <div class="notification-icon">
+                <span class="notification-drop"></span>
+              </div>
+              <span class="notification" />
+            </a>
+          </div>
+
+          <div class="repo-details-container flex">
+            <div class="dropdownModalBox" id="repo-details-dropdown">
+              <div class="click repo-details-click">
+                <span class="selectedText">
+                  <div class="cross"></div>
+                </span>
+                <div class="dropdown-icon"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-details-container">
+            <div class="dropdownModalBox" id="profile-details-dropdown">
+              <div class="click profile-details-click">
+                <span class="selectedText">
+                  <div class="pictureFrame">
+                    <img src="./assets/me.jpg" alt="" />
+                  </div>
+                </span>
+                <div class="dropdown-icon"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="github-main">
+      
+      <div class="github-profile-and-repos flex">
+        <div class="github-tabs">
+          <nav>
+            <ul class="tabs-ul">
+              <li class="flex tab-list-item">
+                <div class="overviewicon-wrap flex">
+                  <div class="overviewicon"></div>
+                </div>
+                <a href="#">Overview</a>
+              </li>
+              <li class="flex tab-list-item active">
+                <div class="repoicon-wrap">
+                  <div class="repoicon"></div>
+                </div>
+                <a href="#">Repositories <span class="repo-count">18</span></a>
+              </li>
+              <li class="flex tab-list-item">
+                <div class="projecticon-wrap">
+                  <div class="projecticon"></div>
+                </div>
+                <a href="#">Projects</a>
+              </li>
+              <li class="flex tab-list-item">
+                <div class="packagesicon-wrap pictureFrame flex">
+                  <svg
+                    version="1.1"
+                    width="17"
+                    height="17"
+                    stroke-width="20px"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 511.973 511.973"
+                  >
+                    <g>
+                      <path
+                        d="m255.989 0-221.693 127.993v255.985l221.693 127.994 221.688-127.994v-255.985zm176.683 136.651-176.683 101.965-176.688-101.965 176.688-102.01zm-368.376 25.977 176.693 101.969v204.074l-176.693-102.013zm206.693 306.043v-204.074l176.688-101.968v204.03z"
+                        fill="#959da5"
+                        data-original="#959da5"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <a href="#">Packages</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        
+        <section class="github-profile">
+          <div class="profile-container">
+            <div class="profile-image-container">
+              <a href="#">
+                <div class="profile-image pictureFrame flex">
+                  <img src="./assets/me.jpg" alt="" />
+                </div>
+              </a>
+              <div class="set-status-container">
+                <div class="set-status">
+                  <button class="status flex">
+                    <div>
+                      <div></div>
+                    </div>
+                    <span>Set status</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="name">
+              <h1>
+                <span class="fullName">Eze Bernardine May</span>
+                <span class="profile-handle">EzeBernardine</span>
+              </h1>
+            </div>
+          </div>
+
+          <div class="my-profile-bio">
+            <h2>Front-End Dev</h2>
+          </div>
+
+          <div class="editable-profile">
+            <div class="edit-profile-button">
+              <button>Edit profile</button>
+            </div>
+            <div class="followings">
+              <a href="#">
+                <div class="flex followers">
+                  <div class="followersicon-wrap">
+                    <div class="followersicon"></div>
+                  </div>
+                  <b class="following-count">5</b>
+                  followers
+                </div>
+              </a>
+              .
+              <a href="#">
+                <div class="flex followers">
+                  <b class="following-count">11</b>
+                  following
+                </div>
+              </a>
+              .
+              <a href="#">
+                <div class="flex followers">
+                  <div class="star-wrap">
+                    <svg
+                      width="512"
+                      height="512"
+                      x="0"
+                      stroke-width="15px"
+                      stroke="#586069"
+                      y="0"
+                      viewBox="0 0 511.98685 511"
+                    >
+                      <g>
+                        <path
+                          d="m114.59375 491.140625c-5.609375 0-11.179688-1.75-15.933594-5.1875-8.855468-6.417969-12.992187-17.449219-10.582031-28.09375l32.9375-145.089844-111.703125-97.960937c-8.210938-7.167969-11.347656-18.519532-7.976562-28.90625 3.371093-10.367188 12.542968-17.707032 23.402343-18.710938l147.796875-13.417968 58.433594-136.746094c4.308594-10.046875 14.121094-16.535156 25.023438-16.535156 10.902343 0 20.714843 6.488281 25.023437 16.511718l58.433594 136.769532 147.773437 13.417968c10.882813.980469 20.054688 8.34375 23.425782 18.710938 3.371093 10.367187.253906 21.738281-7.957032 28.90625l-111.703125 97.941406 32.9375 145.085938c2.414063 10.667968-1.726562 21.699218-10.578125 28.097656-8.832031 6.398437-20.609375 6.890625-29.910156 1.300781l-127.445312-76.160156-127.445313 76.203125c-4.308594 2.558594-9.109375 3.863281-13.953125 3.863281zm141.398438-112.875c4.84375 0 9.640624 1.300781 13.953124 3.859375l120.277344 71.9375-31.085937-136.941406c-2.21875-9.746094 1.089843-19.921875 8.621093-26.515625l105.472657-92.5-139.542969-12.671875c-10.046875-.917969-18.6875-7.234375-22.613281-16.492188l-55.082031-129.046875-55.148438 129.066407c-3.882812 9.195312-12.523438 15.511718-22.546875 16.429687l-139.5625 12.671875 105.46875 92.5c7.554687 6.613281 10.859375 16.769531 8.621094 26.539062l-31.0625 136.9375 120.277343-71.914062c4.308594-2.558594 9.109376-3.859375 13.953126-3.859375zm-84.585938-221.847656s0 .023437-.023438.042969zm169.128906-.0625.023438.042969c0-.023438 0-.023438-.023438-.042969zm0 0"
+                          fill="#586069"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <b class="following-count">11</b>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="location-details">
+            <ul>
+              <li class="flex">
+                <div class="companyicon-wrap">
+                  <div class="companyicon"></div>
+                </div>
+                <span>LearnFactory Nigeria</span>
+              </li>
+              <li class="flex">
+                <div class="locationicon-wrap">
+                  <div class="locationicon"></div>
+                </div>
+                <span>Nigeria</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="github-repos">
+          <div class="github-search">
+            <form action="" class="flex">
+              <div class="search-github-repos">
+                <input type="text" placeholder="Finde a repository ..." />
+              </div>
+              <div class="search-github-buttons flex">
+                <details class="dropdownModalBox" id="search-github-types">
+                  <summary class="click search-github-types-click" id="click">
+                    <span class="selectedText">
+                      Type: <span class="all">All</span>
+                    </span>
+                    <div class="dropdown-icon"></div>
+                  </summary>
+                </details>
+
+                <details class="dropdownModalBox" id="search-github-language">
+                  <summary class="click" id="click">
+                    <span class="selectedText">
+                      Language: <span class="all">All</span>
+                    </span>
+                    <div class="dropdown-icon"></div>
+                  </summary>
+                </details>
+
+                <a href="" class="new">
+                  <div class="flex">
+                    <div class="repoicon-wrap">
+                      <div class="repoicon"></div>
+                    </div>
+                    New
+                  </div>
+                </a>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/tabs.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+/* style for followers button */
+.followersicon-wrap {
+  height: 13px;
+  width: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.followersicon-wrap:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border: 2px solid #6a737d;
+  border-radius: 50%;
+  top: 0;
+  left: 3px;
+  background-color: white;
+  z-index: 2;
+  box-shadow: 0px -2px 0 1px white;
+}
+.followersicon-wrap:after {
+  background-color: white;
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border: 2px solid #6a737d;
+  border-radius: 50%;
+  top: 5px;
+  left: 1px;
+  box-shadow: 0 0 0 2px white;
+}
+.followersicon-wrap .followersicon {
+  background-color: white;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  border: 2px solid #6a737d;
+  border-radius: 50%;
+  top: 1px;
+  left: 11px;
+}
+.followersicon-wrap .followersicon:before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border: 2px solid #6a737d;
+  border-radius: 50%;
+  top: 3px;
+  left: -8px;
+  background-color: white;
+}

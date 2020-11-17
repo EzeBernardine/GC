@@ -1,0 +1,51 @@
+.menuicon-main button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.menuicon-main button .menuIcon-container {
+  width: 25px;
+  height: 18px;
+}
+.menuIcon-div::before {
+  top: -9px;
+  transform: none;
+}
+.menuIcon-div::after {
+  top: 9px;
+  transform: none;
+}
+.menuicon-main button .menuIcon-container .menuIcon-div::before,
+.menuIcon-div::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: white;
+  visibility: visible;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /* transition: 250ms linear; */
+}
+.menuicon-main button .menuIcon-container .menuIcon-div {
+  grid-gap: 7px;
+  width: 24px;
+  height: 2px;
+  top: 9px;
+  background: white;
+  align-items: center;
+  position: relative;
+  visibility: unset;
+}
+.menuicon-main:hover button .menuIcon-container .menuIcon-div,
+.menuicon-main:hover button .menuIcon-container .menuIcon-div:before ,
+.menuicon-main:hover button .menuIcon-container .menuIcon-div:after {
+  background: hsla(0, 100%, 99.8%, 0.7);
+}
+@media (max-width: 800px) {
+  .menuicon-main button .menuIcon-container .menuIcon-div {
+    display: block;
+  }
+}

@@ -1,0 +1,148 @@
+.github-profile-and-repos * {
+  box-sizing: border-box;
+}
+.github-profile {
+  width: 25%;
+  padding: 0 16px 0 0;
+  margin-top: -32px;
+}
+.github-profile .profile-image-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.github-profile .profile-image-container .set-status-container {
+  position: absolute;
+  bottom: 32px;
+  right: 0%;
+  width: 38px;
+}
+.github-profile .profile-image-container .set-status {
+  position: relative;
+  top: 80%;
+  right: 0%;
+}
+.github-profile .profile-image-container .set-status .status {
+  border-radius: 2rem !important;
+  padding: 8px;
+  box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04);
+  border: 1px solid #e1e4e8;
+  background: white;
+  width: 38px;
+  height: 38px;
+  margin: 0;
+}
+.github-profile .profile-image-container .set-status .status span {
+  display: none;
+}
+
+.github-profile .profile-image-container .set-status .status:hover {
+  width: max-content;
+  padding: 8px 9px;
+  box-shadow: 0 3px 6px rgba(149, 157, 165, 0.15);
+}
+
+.github-profile .profile-image-container .set-status .status:hover span {
+  display: block;
+}
+.github-profile .name span {
+  display: block;
+  text-align: start;
+}
+.github-profile .name {
+  padding: 16px 0;
+}
+.github-profile .name .fullName {
+  font-size: 26px;
+  word-break: break-word;
+  line-height: 1.25;
+  font-weight: 600;
+}
+.github-profile .name .profile-handle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #586069;
+}
+.my-profile-bio {
+  margin-bottom: 16px;
+}
+.my-profile-bio h2 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #24292e;
+  text-align: start;
+}
+/* style for the edit profile button */
+.editable-profile .edit-profile-button {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.editable-profile button {
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  width: 100%;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  background-color: #fafbfc;
+  cursor: pointer;
+  border-radius: 6px;
+  display: block;
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color, background-color, border-color;
+}
+.editable-profile button:hover {
+  background-color: #f3f4f6;
+  border-color: rgba(27, 31, 35, 0.15);
+}
+
+/* style for profile following section */
+.editable-profile .followings {
+  margin-bottom: 16px;
+  text-align: start;
+}
+.editable-profile .followings .followers .following-count {
+  padding: 0 4px;
+  color: #24292e;
+}
+.editable-profile .followings .followers {
+  word-break: break-word;
+  font-size: 14px;
+  color: #586069;
+  white-space: nowrap;
+  width: max-content;
+  display: inline-flex;
+}
+.editable-profile .followings .followers .star-wrap {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  border-radius: 50%;
+}
+.editable-profile .followings a:hover * {
+  color: #0366d6 !important;
+  fill: #0366d6 !important;
+  border-color: #0366d6 !important;
+}
+.editable-profile .followings a:hover * {
+  color: #0366d6 !important;
+  fill: #0366d6 !important;
+}
+/* style for location and company details */
+.location-details ul li {
+  justify-content: flex-start;
+  padding: 4px 0 0 22px;
+  position: relative;
+}
+
+.location-details ul li span {
+  white-space: nowrap;
+  font-size: 14px;
+  color: #24292e;
+  /* padding-left: 6px; */
+}

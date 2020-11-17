@@ -1,0 +1,41 @@
+/* style for github overview icon */
+.overviewicon-wrap {
+  height: 14px;
+  width: 18px;
+  position: relative;
+}
+.overviewicon {
+  display: inline-block;
+  bottom: -1px;
+  width: 0;
+  height: 0;
+  border-top-style: solid;
+  border-top-width: 4px;
+  border-top-color: #959da5;
+  border-right: 4px solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 4px solid transparent;
+  position: absolute;
+}
+.overviewicon:after {
+  border: 2px solid #959da5;
+  height: 9px;
+  width: 6px;
+  content: "";
+  position: absolute;
+  right: 0px;
+  margin: auto;
+  bottom: 2px;
+  border-radius: 2px 4px 2px 2px;
+}
+.overviewicon:before {
+  border: 2px solid #959da5;
+  height: 9px;
+  margin: auto;
+  width: 6px;
+  content: "";
+  position: absolute;
+  left: -1px;
+  bottom: 2px;
+  border-radius: 4px 2px 2px 2px;
+}
