@@ -1,0 +1,46 @@
+.status {
+  box-sizing: border-box;
+  border: 1px solid #e1e4e8;
+  width: calc(100% - 32px);
+  margin: 0 16px;
+  border-radius: 6px;
+  padding: 4px 6px;
+  display: flex;
+  cursor: pointer;
+}
+.status:hover * {
+  color: #0366d6;
+  border-color: #0366d6;
+}
+.status > div div {
+  border: 1px solid #586069;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  position: relative;
+}
+.status > div div::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 2px;
+  background: #586069;
+  border-radius: 50%;
+  right: 4px;
+  top: 4px;
+  box-shadow: -6px 0 0px 0 #586069;
+}
+.status > div div::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  border-top: 1px solid #586069;
+  border-right: 1px solid #586069;
+  border-radius: 5px;
+  left: 0px;
+  right: 0px;
+  bottom: 3px;
+  margin: auto;
+  transform: rotate(125deg);
+}

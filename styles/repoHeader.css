@@ -1,0 +1,296 @@
+.github-profile-and-repos .github-repos {
+  padding: 0 16px;
+  width: 75%;
+  max-width: 960px;
+  padding: 0 32px 0 16px;
+}
+.github-profile-and-repos .github-repos .github-search {
+  padding: 16px 0;
+  border-bottom: 1px solid #e1e4e8 !important;
+}
+
+.github-profile-and-repos
+  .github-repos
+  .github-search
+  form
+  .search-github-repos {
+  flex: 1;
+  margin-right: 16px;
+}
+/* style for the search input */
+
+.github-profile-and-repos
+  .github-repos
+  .github-search
+  form
+  .search-github-repos
+  input[type="text"] {
+  padding: 3px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #24292e;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  width: 100%;
+  box-shadow: inset 0 1px 0 rgba(225, 228, 232, 0.2);
+}
+
+.github-profile-and-repos
+  .github-repos
+  .github-search
+  form
+  .search-github-repos
+  input:active,
+.github-profile-and-repos
+  .github-repos
+  .github-search
+  form
+  .search-github-repos
+  input:focus {
+  border-color: #0366d6;
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+}
+/* styles for the dropdown and new button */
+
+.github-profile-and-repos .github-repos .github-search .search-github-buttons {
+  /* flex: 2; */
+  flex-wrap: nowrap;
+  /* justify-content: space-between; */
+}
+
+.github-profile-and-repos
+  .github-repos
+  .github-search
+  .search-github-buttons
+  > #search-github-types {
+  margin-right: 8px;
+}
+
+.github-profile-and-repos
+  .github-repos
+  .github-search
+  .search-github-buttons
+  .dropdownModalBox
+  #click {
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15) !important;
+  box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04),
+    inset 0 1px 0 hsla(0, 0%, 100%, 0.25);
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color, background-color, border-color;
+  padding: 5px 16px;
+}
+
+.github-profile-and-repos
+  .github-repos
+  .github-search
+  .search-github-buttons
+  .dropdownModalBox
+  #click:hover {
+  background: #f3f4f6 !important;
+  border: 1px solid rgba(27, 31, 35, 0.15) !important;
+}
+.github-profile-and-repos .dropdownModalBox #click .dropdown-icon {
+  border-top-color: #24292e;
+}
+
+.github-profile-and-repos .github-repos .dropdownModalBox #click span {
+  font-size: 14px;
+  color: #24292e;
+  font-weight: 500;
+  opacity: 1;
+  line-height: 20px;
+}
+.github-profile-and-repos .github-repos .dropdownModalBox #click .all {
+  font-weight: 500;
+  opacity: 1;
+}
+
+.github-profile-and-repos .github-repos .dropdownModalBox #click .selectedText {
+  opacity: 0.75;
+  padding: 0;
+  margin-right: 4px;
+}
+.github-profile-and-repos
+  .github-repos
+  .dropdownModalBox
+  .details-modal-section
+  .head
+  header {
+  padding: 7px 7px 7px 16px;
+}
+.github-profile-and-repos
+  .github-repos
+  .dropdownModalBox
+  .details-modal-section
+  .head
+  header
+  span {
+  font-weight: 600;
+  flex: 1;
+  text-align: start;
+  color: #24292e;
+  font-size: 12px;
+}
+.github-profile-and-repos
+  .dropdownModalBox
+  .details-modal-section
+  .head
+  header
+  button {
+  padding: 8px;
+  position: relative;
+  cursor: pointer;
+  margin: -8px 0;
+}
+.github-profile-and-repos
+  .dropdownModalBox
+  .details-modal-section
+  .head
+  header
+  button:hover:after,
+.github-profile-and-repos
+  .dropdownModalBox
+  .details-modal-section
+  .head
+  header
+  button:hover:before {
+  background: #24292e;
+}
+.github-profile-and-repos
+  .dropdownModalBox
+  .details-modal-section
+  .head
+  header
+  button:after {
+  content: "";
+  position: absolute;
+  background: #959da5;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(45deg);
+  height: 13px;
+  width: 2px;
+}
+.github-profile-and-repos
+  .dropdownModalBox
+  .details-modal-section
+  .head
+  header
+  button::before {
+  content: "";
+  position: absolute;
+  background: #959da5;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(-45deg);
+  height: 13px;
+  width: 2px;
+}
+/* style for the new button */
+
+.github-profile-and-repos .github-repos .search-github-buttons .new {
+  margin-left: 16px;
+}
+.github-profile-and-repos .github-repos .search-github-buttons .new > .flex {
+  color: #fff;
+  background-color: #2ea44f;
+  border-color: rgba(27, 31, 35, 0.16);
+  padding: 5px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  word-wrap: break-word;
+  flex-wrap: nowrap;
+}
+
+.github-profile-and-repos
+  .github-repos
+  .search-github-buttons
+  .new
+  > .flex:hover {
+  background-color: #2c974b;
+  border-color: rgba(27, 31, 35, 0.14);
+}
+
+.github-profile-and-repos
+  .github-repos
+  .search-github-buttons
+  .new
+  > .flex
+  .repoicon-wrap {
+  margin-right: 6px;
+}
+.new.repoicon-wrap::after {
+  border-right-color: hsla(0, 0%, 100%, 0.79) !important;
+  border-top-color: hsla(0, 0%, 100%, 0.79) !important;
+}
+.new .repoicon-wrap::before {
+  border-left-color: hsla(0, 0%, 100%, 0.79) !important;
+  border-top-color: hsla(0, 0%, 100%, 0.79) !important;
+}
+.new .repoicon-wrap .repoicon {
+  border-color: hsla(0, 0%, 100%, 0.79) !important;
+}
+.new .repoicon-wrap .repoicon:before {
+  border-right-color: hsla(0, 0%, 100%, 0.79) !important;
+  border-top-color: hsla(0, 0%, 100%, 0.79) !important;
+}
+.new .repoicon-wrap .repoicon:after {
+  background: hsla(0, 0%, 100%, 0.79) !important;
+}
+
+@media (max-width: 1000px) {
+  .github-profile-and-repos .github-repos {
+    padding: 0 24px 0 8px;
+  }
+}
+
+@media (max-width: 765px) {
+  .github-profile-and-repos
+    .github-repos
+    .github-search
+    form
+    .search-github-repos {
+    min-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .github-profile-and-repos
+    .github-repos
+    .github-search
+    .search-github-buttons {
+    min-width: 100%;
+    justify-content: flex-start;
+  }
+
+  .github-profile-and-repos
+    .github-repos
+    .github-search
+    .search-github-buttons
+    a {
+    margin: 0 0 0 auto;
+  }
+}
+
+@media (max-width: 765px) {
+  .github-repos {
+    width: 100% !important;
+    padding: 0 16px !important;
+  }
+  .github-profile-and-repos
+    .github-repos
+    .github-search
+    form
+    .search-github-repos {
+    margin: 0 0 16px 0;
+  }
+}

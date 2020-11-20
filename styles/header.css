@@ -1,6 +1,8 @@
 .main-menu {
   background: #24292e;
   padding: 16px 32px;
+  position: relative;
+  z-index: 20;
 }
 
 .menuicon-main {
@@ -17,8 +19,8 @@
   background: hsla(0, 100%, 99.8%, 0.7);
 }
 .github-logo .pictureFrame {
-  height: 33px;
-  width: 33px;
+  height: 30px;
+  width: 30px;
 }
 .profile-details .repo-details-container {
   margin-right: 16px;
@@ -385,5 +387,9 @@
   .profile-details .notification-main,
   .github-logo {
     margin: 0 !important;
+  }
+  .github-logo .pictureFrame {
+    height: 26px;
+    width: 26px;
   }
 }

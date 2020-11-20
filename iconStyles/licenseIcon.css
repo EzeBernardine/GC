@@ -1,0 +1,68 @@
+.licenseInfoIcon {
+  display: inline-flex;
+  height: 12px;
+  width: 2px;
+  background-color: #6a737d;
+  position: relative;
+  margin: 0 15px 0 10px;
+}
+.licenseInfoIcon:before {
+  content: "";
+  position: absolute;
+  border-bottom: 6px solid #6a737d;
+  border-top: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-left: 3px solid transparent;
+  height: 0;
+  width: 0;
+  right: 3px;
+}
+.licenseInfoIcon:after {
+  content: "";
+  position: absolute;
+  border-bottom: 6px solid #6a737d;
+  border-top: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-left: 3px solid transparent;
+  height: 0;
+  width: 0;
+  left: 3px;
+}
+.licenseInfoIcon div {
+  display: inline-flex;
+  width: 14px;
+  height: 2px;
+  background-color: #6a737d;
+  position: absolute;
+  right: 0;
+  left: -6px;
+  margin: auto;
+  top: 2px;
+  box-shadow: 11px 9px 0 0px white, 4px 9px 0 0px #6a737d, -5px 9px 0 0px white;
+}
+.licenseInfoIcon div:before {
+  content: "";
+  position: absolute;
+  border-bottom: 4px solid white;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  height: 0;
+  width: 0;
+  right: 1px;
+  z-index: 10;
+  top: 1px;
+}
+.licenseInfoIcon div:after {
+  content: "";
+  position: absolute;
+  border-bottom: 4px solid white;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  height: 0;
+  width: 0;
+  left: 1px;
+  z-index: 10;
+  top: 1px;
+}

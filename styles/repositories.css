@@ -1,0 +1,94 @@
+/* styles for the repositories section */
+.repositories-list .repository-details {
+  width: 75%;
+  text-align: start;
+}
+.repositories-list .repository {
+  align-items: stretch;
+  padding: 24px 0;
+  border-bottom: 1px solid #e1e4e8 !important;
+}
+.repositories-list .repository-details .repository-name {
+  margin-bottom: 4px;
+  display: inline-block;
+}
+.repositories-list .repository-details .repository-name h3 a {
+  color: #0366d6;
+  word-break: break-all;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+.repositories-list .repository-details .repository-name h3:hover a {
+  text-decoration: underline;
+}
+.repositories-list .repository-details .repository-description {
+  margin-bottom: 8px;
+}
+.repositories-list .repository-details .repository-description p {
+  padding-right: 24px;
+  font-size: 14px;
+  color: #586069;
+}
+.repositories-list .repository-details .repository-more {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #586069;
+}
+.repositories-list .repository-details .repository-more .language > span {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: inline-block;
+  border: 1px solid rgba(27, 31, 35, 0.09);
+}
+.repositories-list .repository-details .repository-more > * {
+  margin-right: 16px;
+  color: #586069;
+}
+.repositories-list .repository-details .repository-more a:hover * {
+  color: #0366d6 !important ;
+}
+.repositories-list .repository-details .repository-more a:hover .forkIcon {
+  border-color: #0366d6 !important ;
+}
+.repositories-list
+  .repository-details
+  .repository-more
+  a:hover
+  .forkIcon:after {
+  box-shadow: -4px -11px 0 0 white, 4px -11px 0 0 white,
+    -4px -11px 0 1px #0366d6, 4px -11px 0 1px #0366d6, 0px 0px 0 1px #0366d6;
+}
+.repositories-list
+  .repository-details
+  .repository-more
+  a:hover
+  .starIcon
+  div:not(.outline) {
+  border-top-color: #0366d6 !important ;
+}
+.repositories-list .star-main {
+  width: 25%;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.repositories-list .star-main button {
+  color: #24292e;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.14);
+  box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04),
+    inset 0 1px 0 hsla(0, 0%, 100%, 0.25);
+  padding: 3px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 6px;
+  margin: 0 0 0 auto;
+}
+.repositories-list .star-main button:hover {
+  background-color: #f3f4f6;
+  border-color: rgba(27, 31, 35, 0.16);
+}

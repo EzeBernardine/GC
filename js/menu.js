@@ -1,22 +1,23 @@
 // create the variable overlay
 let overlay;
 
-// const handleSearchBar = () => {
-//   let searchbar = document.getElementById("searchbar");
-//   searchbar.addEventListener("click", () => {
-//     searchbar.classList.toggle("searching");
-//     console.log(searchbar);
-//   });
-// };
+const handleSearchBar = () => {
+  let searchbar = document.getElementById("searchbar");
+  searchbar.addEventListener("click", () => {
+    searchbar.classList.toggle("searching");
+    console.log(searchbar);
+  });
+};
 
-// const handleMobileMenuDropDown = () => {
-//   let menuicon = document.getElementsByClassName("menuicon-main")[0];
-//   let searchAndItems = document.getElementsByClassName("search-and-items")[0];
-//   menuicon.addEventListener("click", () => {
-//     searchAndItems.classList.toggle("search-and-items-show");
-//   });
-// };
-// handleMobileMenuDropDown();
+// handle the display of menu on mobile view
+const handleMobileMenuDropDown = () => {
+  let menuicon = document.getElementsByClassName("menuicon-main")[0];
+  let searchAndItems = document.getElementsByClassName("search-and-items")[0];
+  menuicon.addEventListener("click", () => {
+    searchAndItems.classList.toggle("search-and-items-show");
+  });
+};
+handleMobileMenuDropDown();
 
 // get a class or an id
 const getElementByClassOrId = (classOrId, type = "class") => {
@@ -65,9 +66,12 @@ const updateCreateDropdownModal = () => {
 const createDropdownModal = (attachedId, array) => {
   let detalsDropdown = document.getElementById(`${attachedId}`);
   let section = document.createElement("SECTION");
+  let sectionContent = document.createElement("div");
+  sectionContent.className = "section-content";
 
   // add the arrow sign
   let [div] = createElementCall(["DIV"]);
+  // sectionMain.appendChild(section);
   section.appendChild(div).className = "arrow";
 
   // this loops through the array
@@ -79,9 +83,12 @@ const createDropdownModal = (attachedId, array) => {
     for (let j = 0; j < array[i].length; j++) {
       // crate an li element for each nexted array
       let li = document.createElement("LI");
+      let liSpan = document.createElement("SPAN");
+      liSpan.className = "list";
 
       // Set its contents
-      li.appendChild(document.createTextNode(array[i][j]));
+      liSpan.appendChild(document.createTextNode(array[i][j]));
+      li.appendChild(liSpan);
       // Add it to the list:
       ul.appendChild(li);
     }
@@ -92,12 +99,17 @@ const createDropdownModal = (attachedId, array) => {
 
   // assign a classname to the created section tag
   section.className = "details-modal-section";
+  sectionContent.appendChild(section);
   // add section to details-dropdown
-  return detalsDropdown.appendChild(section);
+  return detalsDropdown.appendChild(sectionContent);
 };
 
 // remove dropdown modal section
-const removeDropdownModal = (element) => element.remove();
+const removeDropdownModal = (element, detailsElement) => {
+  // set the open attribute of deatls tag to false
+  detailsElement.open = false;
+  element.remove();
+};
 
 // Remove modal overlay
 const removeOverlayModal = (element) => element.remove();
@@ -108,21 +120,23 @@ const createOverlayModal = (element) => {
   let detalsDropdown = document.getElementById(`${element}`);
   let div = document.createElement("DIV");
   div.className = "overlay";
-  detalsDropdown.appendChild(div);
+  detalsDropdown.children[1].appendChild(div);
+  
   // assign the value of the overlay once created
   overlay = document.getElementsByClassName("overlay")[0];
-  return closeModal();
+  return closeModal(detalsDropdown);
 };
 
 // remove both dropdown and overlay modal
-const closeModal = () => {
+const closeModal = (detailsElement) => {
   overlay = document.getElementsByClassName("overlay")[0];
   overlay.addEventListener("click", () => {
     let detailsModalSection = document.getElementsByClassName(
-      "details-modal-section"
+      "section-content"
+      // "details-modal-section"
     )[0];
     removeOverlayModal(overlay);
-    removeDropdownModal(detailsModalSection);
+    removeDropdownModal(detailsModalSection, detailsElement);
   });
 };
 

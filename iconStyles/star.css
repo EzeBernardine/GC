@@ -1,0 +1,51 @@
+/* star  */
+.starIcon {
+  height: 10px;
+  width: 20px;
+  position: relative;
+  display: inline-flex;
+}
+.starIcon div {
+  position: absolute;
+  border-top: 5px solid #6a737d;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  height: 0;
+  width: 0;
+  margin: auto;
+  top: 24px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 7px;
+}
+.starIcon .outline {
+  position: absolute;
+  border-top: 3px solid white;
+  border-bottom: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+.starIcon .starred {
+  border-top-color:  #6a737d !important;
+}
+
+.starIcon .star1 {
+  transform: translate(0px, -21px);
+}
+.starIcon .star2 {
+  transform: rotate(-72deg) translate(25px, -4px);
+}
+.starIcon .star3 {
+  transform: rotate(69deg) translate(-25px, -5px);
+}
+.starIcon .star6 {
+  transform: translate(0px, -20px);
+}
+.starIcon .star4 {
+  transform: rotate(-72deg) translate(23px, -5px);
+}
+.starIcon .star5 {
+  transform: rotate(69deg) translate(-23px, -6px);
+}

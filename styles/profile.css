@@ -5,11 +5,48 @@
   width: 25%;
   padding: 0 16px 0 0;
   margin-top: -32px;
+  max-width: 320px;
+  padding: 0 16px 0 32px;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1 !important;
+  }
+}
+.github-profile .profileStick {
+  overflow-y: auto;
+  text-align: start;
+  width: 100%;
+  font-size: 14px;
+  color: #24292e;
+  justify-content: flex-start;
+  z-index: 10;
+}
+.github-profile .pinneedContent {
+  flex-wrap: nowrap;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 21%;
+  padding: 8px 32px 8px 0;
+  justify-content: flex-start;
+  ;
+}
+
+.github-profile .profileStick .pictureFrame {
+  margin-right: 8px;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
 }
 .github-profile .profile-image-container {
   width: 100%;
   height: auto;
   position: relative;
+  z-index: 11;
 }
 .github-profile .profile-image-container .set-status-container {
   position: absolute;
@@ -51,6 +88,7 @@
 }
 .github-profile .name {
   padding: 16px 0;
+  /* max-width: 241.5px; */
 }
 .github-profile .name .fullName {
   font-size: 26px;
@@ -124,10 +162,8 @@
   position: relative;
   border-radius: 50%;
 }
-.editable-profile .followings a:hover * {
-  color: #0366d6 !important;
-  fill: #0366d6 !important;
-  border-color: #0366d6 !important;
+.editable-profile .followings a:hover .starIcon div {
+  border-top-color: #0366d6 !important;
 }
 .editable-profile .followings a:hover * {
   color: #0366d6 !important;
@@ -145,4 +181,68 @@
   font-size: 14px;
   color: #24292e;
   /* padding-left: 6px; */
+}
+
+@media (max-width: 1000px) {
+  .github-profile {
+    padding: 0 8px 0 24px;
+  }
+}
+@media (max-width: 765px) {
+  .github-profile .profileStick {
+    display: none;
+  }
+  .github-profile {
+    min-width: 100%;
+    order: -1;
+    padding: 0 16px;
+    margin-bottom: 24px;
+    margin-top: 0;
+  }
+  .github-profile .profile-container {
+    display: flex;
+    position: relative;
+    margin-bottom: 64px;
+  }
+  .github-profile .profile-container .profile-image-container {
+    margin-right: 16px;
+    width: 16.66667%;
+    position: unset;
+    display: inline-block;
+  }
+  .github-profile
+    .profile-container
+    .profile-image-container
+    .set-status-container {
+    bottom: -54px;
+    width: 100%;
+  }
+  .github-profile
+    .profile-container
+    .profile-image-container
+    .set-status-container
+    button {
+    width: 100%;
+    border-radius: 6px !important;
+    justify-content: flex-start;
+  }
+  .github-profile
+    .profile-container
+    .profile-image-container
+    .set-status-container
+    .status:hover {
+    width: 100%;
+    padding: 8px !important;
+  }
+  .github-profile
+    .profile-container
+    .profile-image-container
+    .set-status-container
+    button
+    span {
+    display: block;
+  }
+  .github-profile .location-details {
+    display: none;
+  }
 }

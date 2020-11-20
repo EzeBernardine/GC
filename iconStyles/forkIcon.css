@@ -1,0 +1,36 @@
+.forkIcon {
+  height: 6px;
+  width: 9px;
+  position: relative;
+  display: inline-flex;
+  border-right: 2px solid #586069;
+  border-left: 2px solid #586069;
+  border-bottom: 2px solid #586069;
+  margin-right: 7px;
+  border-radius: 5px;
+}
+.forkIcon:after {
+  height: 1px;
+  width: 1px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  bottom: -7px;
+  border: 1px solid white;
+  right: 0;
+  left: 0;
+  margin: auto;
+  box-shadow: -4px -11px 0 0 white, 4px -11px 0 0 white,
+    -4px -11px 0 1px #586069, 4px -11px 0 1px #586069, 0px 0px 0 1px #586069;
+}
+.forkIcon:before {
+  height: 4px;
+  width: 2px;
+  content: "";
+  position: absolute;
+  background-color: #586069;
+  bottom: -5px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
