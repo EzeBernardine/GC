@@ -16,6 +16,11 @@
   transition: 250ms ease-in-out;
   /* border: 1px solid #e3e5ea; */
 }
+
+details summary::-webkit-details-marker {
+  display: none !important;
+}
+
 .dropdownModalBox > .click span {
   color: #777;
   font-size: 13px;
