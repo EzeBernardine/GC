@@ -22,7 +22,8 @@ export const renderUserprofileData = (data) => {
       // attatch the userhandle create text nnode to the span tag
       span.appendChild(document.createTextNode(data.userhandle));
       // get the already created h1 tag inside the name elment
-      return (getElementByClassOrId("name").children[0].appendChild(
+      return (getElementByClassOrId("name").appendChild(
+      // return (getElementByClassOrId("name").children[0].appendChild(
         span
       ).className = "profile-handle");
     }
