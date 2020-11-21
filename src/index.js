@@ -1,6 +1,6 @@
 const axios = require("axios");
 const moment = require("moment");
-// const { token } = require("../config/config");
+const { token } = require("../config/config");
 
 
 // Define constant
