@@ -227,6 +227,9 @@
 .search-and-items form:focus-within input {
   color: #24292e !important;
 }
+.search-and-items form:focus-within .search-click-icon {
+  display: none;
+}
 .search-and-items form .searchbar {
   border: 1px solid #495159;
   min-height: 28px;

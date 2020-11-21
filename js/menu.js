@@ -1,8 +1,6 @@
 // create the variable overlay
 let overlay;
 
-
-
 // handle the display of menu on mobile view
 const handleMobileMenuDropDown = () => {
   let menuicon = document.getElementsByClassName("menuicon-main")[0];
