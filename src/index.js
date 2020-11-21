@@ -1,13 +1,7 @@
 const axios = require("axios");
 const moment = require("moment");
 const { token } = require("../config/config");
-import {
-  renderUserprofileData,
-  renderUserRepositories,
-  renderNoOfRepos,
-  renderHeaderProfileImg,
-  renderTabProfileOnScroll
-} from "../js/renderData.js";
+
 
 // Define constant
 // Endpoint URL

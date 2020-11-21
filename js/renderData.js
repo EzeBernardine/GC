@@ -1,5 +1,6 @@
 // get user name
-export const renderUserprofileData = (data) => {
+
+const renderUserprofileData = (data) => {
   const renderUserName = () => {
     if (data.username) {
       // create  your elements
@@ -198,7 +199,8 @@ export const renderUserprofileData = (data) => {
 };
 
 // render repositories data
-export const renderUserRepositories = (repos, data, callback) => {
+
+const renderUserRepositories = (repos, data, callback) => {
   // check if there are any repos and create a ul for holding each repo content
   const renderReposStatus = () => {
     if (repos && repos.length > 0) {
@@ -369,7 +371,8 @@ export const renderUserRepositories = (repos, data, callback) => {
 };
 
 // display the number of repositories
-export const renderNoOfRepos = (repos) => {
+
+const renderNoOfRepos = (repos) => {
   if (repos && repos.length > 0) {
     // create your element
     let [span] = createElementCall(["SPAN"]);
@@ -384,7 +387,8 @@ export const renderNoOfRepos = (repos) => {
 };
 
 // render user profile image and userhandle on the header
-export const renderHeaderProfileImg = (data) => {
+
+const renderHeaderProfileImg = (data) => {
   // create your image element
   const [img, imgMBOLE] = createElementCall(["IMG", "IMG"]);
   img.src = data.profileImage || "../assets/me.jpg";
@@ -402,7 +406,7 @@ export const renderHeaderProfileImg = (data) => {
   );
 };
 
-export const renderTabProfileOnScroll = (data) => {
+const renderTabProfileOnScroll = (data) => {
   let profileStick = getElementByClassOrId("pinneedContent");
 
   // Observe the presence of the pinned profile card
@@ -422,3 +426,4 @@ export const renderTabProfileOnScroll = (data) => {
 
   observer.observe(getElementByClassOrId("profileStick"));
 };
+
