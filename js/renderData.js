@@ -23,7 +23,7 @@ export const renderUserprofileData = (data) => {
       span.appendChild(document.createTextNode(data.userhandle));
       // get the already created h1 tag inside the name elment
       return (getElementByClassOrId("name").appendChild(
-      // return (getElementByClassOrId("name").children[0].appendChild(
+        // return (getElementByClassOrId("name").children[0].appendChild(
         span
       ).className = "profile-handle");
     }
@@ -407,6 +407,8 @@ export const renderTabProfileOnScroll = (data) => {
         "animation: appear .2s linear 0s  alternate-reverse forwards";
     } else {
       getElementByClassOrId("pinnedImg").src = data.profileImage;
+      getElementByClassOrId("pinneedContent").children[1].innerHTML =
+        data.userhandle;
 
       // animate the apearance of the container
       profileStick.style.cssText = "animation: appear .2s linear 0s  forwards";
