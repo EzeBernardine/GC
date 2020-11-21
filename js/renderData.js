@@ -383,6 +383,7 @@ export const renderNoOfRepos = (repos) => {
   }
 };
 
+// render user profile image and userhandle on the header
 export const renderHeaderProfileImg = (data) => {
   // create your image element
   const [img, imgMBOLE] = createElementCall(["IMG", "IMG"]);
@@ -393,7 +394,11 @@ export const renderHeaderProfileImg = (data) => {
     // return user profile image on the header on desktop view
     getElementByClassOrId("menuProfileImgDTOP").appendChild(img),
     // return user profile image on the header on mobile view
-    getElementByClassOrId("menuProfileImgMOBLE").appendChild(imgMBOLE)
+    getElementByClassOrId("menuProfileImgMOBLE").appendChild(imgMBOLE),
+    // return userhandle on the header on mobile view
+    getElementByClassOrId("menuProfileMOBLE").appendChild(
+      document.createTextNode(data.userhandle)
+    )
   );
 };
 
