@@ -1,5 +1,5 @@
 {
-  "name": "babel_webpack_starter",
+  "name": "github_clone",
   "version": "1.0.0",
   "description": "Starter pack for compiling ES6+ apps to ES5",
   "main": "app.js",
@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --output-public-path=/build/  --mode development --progress --open --hot",
     "build": "webpack --mode production --progress"
   },
-  "author": "Brad Traversy",
+  "author": "Eze Bernardine May",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.4.3",

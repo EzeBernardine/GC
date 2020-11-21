@@ -1,13 +1,7 @@
 // create the variable overlay
 let overlay;
 
-const handleSearchBar = () => {
-  let searchbar = document.getElementById("searchbar");
-  searchbar.addEventListener("click", () => {
-    searchbar.classList.toggle("searching");
-    console.log(searchbar);
-  });
-};
+
 
 // handle the display of menu on mobile view
 const handleMobileMenuDropDown = () => {
@@ -121,7 +115,7 @@ const createOverlayModal = (element) => {
   let div = document.createElement("DIV");
   div.className = "overlay";
   detalsDropdown.children[1].appendChild(div);
-  
+
   // assign the value of the overlay once created
   overlay = document.getElementsByClassName("overlay")[0];
   return closeModal(detalsDropdown);

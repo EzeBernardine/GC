@@ -217,6 +217,15 @@
   max-width: 272px;
   width: 100%;
   margin-right: 16px;
+  border-radius: 6px;
+  transition: 0.2s ease-in;
+}
+.search-and-items form:focus-within {
+  background: white;
+  max-width: 544px;
+}
+.search-and-items form:focus-within input {
+  color: #24292e !important;
 }
 .search-and-items form .searchbar {
   border: 1px solid #495159;
@@ -232,10 +241,10 @@
   font-size: 14px;
   line-height: 20px;
 }
-.search-and-items form .searchbar input:active,
+/* .search-and-items form .searchbar input:active,
 .search-and-items form .searchbar input:focus {
   background: white;
-}
+} */
 .search-and-items form .searchbar .search-click-icon {
   border: 1px solid #495159;
   padding: 8px 7px;
