@@ -1,4 +1,8 @@
 const path = require('path')
+const webpack = require('webpack');
+const dotenv = require('dotenv').config({
+  path: path.join(__dirname, '.env')
+})
 
 module.exports = {
   entry: {
@@ -8,11 +12,10 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: 'app.bundle.js'
   },
-  ENV: JSON.stringify(require(path.join(__dirname, "src", "config", env))),
   module: {
     rules: [
       {
-        test: /\.js?$/,
+        test: /\.es6$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
@@ -20,5 +23,13 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('development'),
+        'token': JSON.stringify(dotenv.parsed.token)
+      }
+    })
+  ]
 }
