@@ -28,7 +28,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production'),
-        // 'token': JSON.stringify(dotenv.parsed.token)
+        'token': process.env.token
       }
     })
   ]
