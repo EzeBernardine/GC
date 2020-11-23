@@ -1,8 +1,8 @@
 const path = require('path')
 const webpack = require('webpack');
-const dotenv = require('dotenv').config({
-  path: path.join(__dirname, '.env')
-})
+// const dotenv = require('dotenv').config({
+//   path: path.join(__dirname, '.env')
+// })
 
 module.exports = {
   entry: {
@@ -28,7 +28,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production'),
-        'token': JSON.stringify(dotenv.parsed.token)
+        // 'token': JSON.stringify(dotenv.parsed.token)
       }
     })
   ]
