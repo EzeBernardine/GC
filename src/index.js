@@ -1,6 +1,6 @@
 const axios = require("axios");
 const moment = require("moment");
-
+// console.log(process.env.token, "toke ===");
 
 // Define constant
 // Endpoint URL
@@ -104,7 +104,7 @@ const getCreatedRepoDate = (value) => {
 };
 
 getRepo().then((data) => {
-  console.log(data)
+  console.log(data);
   // Sort the repos according to udated date
   const repos = data.repositories
     .map((item) => item)
