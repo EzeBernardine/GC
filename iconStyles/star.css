@@ -1,4 +1,62 @@
 /* star  */
+/* .starIcon {
+  height: 10px;
+  width: 20px;
+  position: relative;
+  display: inline-flex;
+}
+.starIcon div {
+  position: absolute;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  height: 0;
+  width: 0;
+  margin: auto;
+  top: 24px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 7px;
+}
+.starIcon .outline {
+  position: absolute;
+  border-bottom: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-left: 14px solid transparent;
+}
+.starIcon .starred {
+  border-top-color:  #6a737d !important;
+}
+
+.starIcon .star1 {
+  transform: translate(0px, -21px);
+  border-top: 6px solid red;
+}
+.starIcon .star2 {
+  transform: rotate(-72deg) translate(25px, -4px);
+  border-top: 6px solid blue;
+}
+.starIcon .star3 {
+  transform: rotate(69deg) translate(-25px, -5px);
+  border-top: 6px solid pink;
+}
+.starIcon .star6 {
+  transform: translate(0px, -20px);
+  border-top: 6px solid orange;
+}
+.starIcon .star4 {
+  transform: rotate(-72deg) translate(23px, -5px);
+  border-top: 6px solid orangered;
+}
+.starIcon .star5 {
+  transform: rotate(69deg) translate(-23px, -6px);
+
+  border-top: 6px solid purple;
+} */
+
+
+/* star  */
 .starIcon {
   height: 10px;
   width: 20px;
@@ -13,12 +71,12 @@
   border-left: 10px solid transparent;
   height: 0;
   width: 0;
-  margin: auto;
+  /* margin: auto; */
   top: 24px;
   right: 0;
   bottom: 0;
   left: 0;
-  border-radius: 7px;
+  border-radius: 3px;
 }
 .starIcon .outline {
   position: absolute;
@@ -32,20 +90,26 @@
 }
 
 .starIcon .star1 {
-  transform: translate(0px, -21px);
+  /* transform: translate(0px, -21px); */
+  transform: translate(-1px, -21px)
 }
 .starIcon .star2 {
-  transform: rotate(-72deg) translate(25px, -4px);
+  /* transform: rotate(-72deg) translate(25px, -4px); */
+  transform:rotate(-72deg) translate(25px, -4px)
 }
 .starIcon .star3 {
-  transform: rotate(69deg) translate(-25px, -5px);
+  /* transform: rotate(69deg) translate(-25px, -5px); */
+  transform: rotate(69deg) translate(-25px, -5px)
 }
 .starIcon .star6 {
-  transform: translate(0px, -20px);
+  /* transform: translate(0px, -20px); */
+  transform:rotate(-72deg) translate(24px, -2px)
 }
 .starIcon .star4 {
-  transform: rotate(-72deg) translate(23px, -5px);
+  /* transform: rotate(-72deg) translate(23px, -5px); */
+  transform: rotate(69deg) translate(-23px, -8px)
 }
 .starIcon .star5 {
-  transform: rotate(69deg) translate(-23px, -6px);
+  /* transform: rotate(69deg) translate(-23px, -6px); */
+  transform: translate(3px, -20px)
 }
