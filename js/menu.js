@@ -27,7 +27,16 @@ const createElementCall = (arr) => {
 
 // update the feature of the dropdown modal for profile section
 const updateCreateDropdownModal = () => {
-  let [a, b, div, button2, span2, div2, div3, div4] = createElementCall([
+  let [
+    signedInLink,
+    userHandleBoldName,
+    userHandleAndSignedContainer,
+    statusButton,
+    statusText,
+    statusIconWrap,
+    statusIcon,
+    buttonContainer,
+  ] = createElementCall([
     "A",
     "B",
     "DIV",
@@ -38,62 +47,64 @@ const updateCreateDropdownModal = () => {
     "DIV",
   ]);
   // create the set status button
-  div2.appendChild(div3);
-  span2.appendChild(document.createTextNode("Set status"));
-  button2.appendChild(div2);
-  button2.appendChild(span2);
-  div4.appendChild(button2).className = "status";
-  getElementByClassOrId("details-modal-section").appendChild(div4);
+  statusIconWrap.appendChild(statusIcon);
+  statusText.appendChild(document.createTextNode("Set status"));
+  statusButton.appendChild(statusIconWrap);
+  statusButton.appendChild(statusText);
+  buttonContainer.appendChild(statusButton).className = "status";
+  getElementByClassOrId("details-modal-section").appendChild(buttonContainer);
 
   // add the a  tag containing the sign in text to a div
-  a.appendChild(document.createTextNode("Signed in as "));
-  b.appendChild(document.createTextNode("EzeBernardine"));
-  a.appendChild(b);
-  div.appendChild(a);
+  signedInLink.appendChild(document.createTextNode("Signed in as "));
+  userHandleBoldName.appendChild(document.createTextNode("EzeBernardine"));
+  signedInLink.appendChild(userHandleBoldName);
+  userHandleAndSignedContainer.appendChild(signedInLink);
   // extract the modal element and attach the div
-  getElementByClassOrId("details-modal-section").appendChild(div);
+  getElementByClassOrId("details-modal-section").appendChild(
+    userHandleAndSignedContainer
+  );
 };
 
-// create the dropdown modal section
+// general  dropdown modal for the list itemsection
 const createDropdownModal = (attachedId, array) => {
   let detalsDropdown = document.getElementById(`${attachedId}`);
-  let section = document.createElement("SECTION");
-  let sectionContent = document.createElement("div");
-  sectionContent.className = "section-content";
+  let sectionTag = document.createElement("SECTION");
+  let sectionContainer = document.createElement("div");
+  sectionContainer.className = "section-content";
 
   // add the arrow sign
   let [div] = createElementCall(["DIV"]);
   // sectionMain.appendChild(section);
-  section.appendChild(div).className = "arrow";
+  sectionTag.appendChild(div).className = "arrow";
 
-  // this loops through the array
+  // loop throught the dropdown list items, and create an li tag for each
   for (let i = 0; i < array.length; i++) {
     // create a ul in each loop
-    let ul = document.createElement("UL");
+    let dropdownListItemContainer = document.createElement("UL");
 
     // loop through each nexted array
     for (let j = 0; j < array[i].length; j++) {
       // crate an li element for each nexted array
-      let li = document.createElement("LI");
-      let liSpan = document.createElement("SPAN");
-      liSpan.className = "list";
+      let dropdownListItem = document.createElement("LI");
+      let dropdownListItemSpan = document.createElement("SPAN");
+      dropdownListItemSpan.className = "list";
 
       // Set its contents
-      liSpan.appendChild(document.createTextNode(array[i][j]));
-      li.appendChild(liSpan);
+      dropdownListItemSpan.appendChild(document.createTextNode(array[i][j]));
+      dropdownListItem.appendChild(dropdownListItemSpan);
       // Add it to the list:
-      ul.appendChild(li);
+      dropdownListItemContainer.appendChild(dropdownListItem);
     }
 
     // add the create lis to the ul
-    section.appendChild(ul);
+    sectionTag.appendChild(dropdownListItemContainer);
   }
 
   // assign a classname to the created section tag
-  section.className = "details-modal-section";
-  sectionContent.appendChild(section);
+  sectionTag.className = "details-modal-section";
+  sectionContainer.appendChild(sectionTag);
   // add section to details-dropdown
-  return detalsDropdown.appendChild(sectionContent);
+  return detalsDropdown.appendChild(sectionContainer);
 };
 
 // remove dropdown modal section
@@ -110,9 +121,9 @@ const removeOverlayModal = (element) => element.remove();
 const createOverlayModal = (element) => {
   // create the overlay if called
   let detalsDropdown = document.getElementById(`${element}`);
-  let div = document.createElement("DIV");
-  div.className = "overlay";
-  detalsDropdown.children[1].appendChild(div);
+  let overlayTag = document.createElement("DIV");
+  overlayTag.className = "overlay";
+  detalsDropdown.children[1].appendChild(overlayTag);
 
   // assign the value of the overlay once created
   overlay = document.getElementsByClassName("overlay")[0];
@@ -135,7 +146,7 @@ const closeModal = (detailsElement) => {
 // open the view more repo related content
 const openModal_repo = () => {
   // data to be populated in the dropdown odal
-  let text = [
+  let array = [
     [
       "New repository",
       "Import repository",
@@ -145,7 +156,7 @@ const openModal_repo = () => {
     ],
   ];
   // create dropdwon modal details
-  createDropdownModal("repo-details-dropdown", text);
+  createDropdownModal("repo-details-dropdown", array);
   // create modal overlay
   createOverlayModal("repo-details-dropdown");
 };
@@ -153,7 +164,7 @@ const openModal_repo = () => {
 // open the view more profile related content
 const openModal_profile = () => {
   // data to be populated in the dropdown odal
-  let text2 = [
+  let array = [
     ["Upgrade", "Feature preview", "Help", "Settings"],
     [
       "Your profile",
@@ -165,7 +176,7 @@ const openModal_profile = () => {
     ],
   ];
   // create dropdwon modal details
-  createDropdownModal("profile-details-dropdown", text2);
+  createDropdownModal("profile-details-dropdown", array);
   // update the remaining content of the profile drpodown modal
   updateCreateDropdownModal();
   // create modal overlay
