@@ -20,7 +20,7 @@ const query =
   " name " +
   " location " +
   " bio " +
-  "repositories(first: 18) { " +
+  "repositories(first: 20) { " +
   " nodes { " +
   " name " +
   " description " +
@@ -30,7 +30,7 @@ const query =
   " stargazerCount " +
   " updatedAt " +
   " viewerHasStarred " +
-  " languages(first: 18) { " +
+  " languages(first: 20) { " +
   " nodes { " +
   " name " +
   " color " +
