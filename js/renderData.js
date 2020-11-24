@@ -4,13 +4,13 @@ const renderUserprofileData = (data) => {
   const renderUserName = () => {
     if (data.username) {
       // create  your elements
-      let [h1, span] = createElementCall(["H1", "SPAN"]);
+      let [userNameHeaderTag, userNameTag] = createElementCall(["H1", "SPAN"]);
       // create a textnode out from the username and append it to the span tag
-      span.appendChild(document.createTextNode(data.username));
+      userNameTag.appendChild(document.createTextNode(data.username));
       // Attatch the span tag to the h1 tag
-      h1.appendChild(span).className = "fullName";
+      userNameHeaderTag.appendChild(userNameTag).className = "fullName";
       // Attatch the h1 tag to the name element
-      return getElementByClassOrId("name").appendChild(h1);
+      return getElementByClassOrId("name").appendChild(userNameHeaderTag);
     }
   };
   renderUserName();
@@ -19,13 +19,13 @@ const renderUserprofileData = (data) => {
   const renderUserHandle = () => {
     if (data.userhandle) {
       // create  your elements
-      let [span] = createElementCall(["SPAN"]);
+      let [userHandleSpanTag] = createElementCall(["SPAN"]);
       // attatch the userhandle create text nnode to the span tag
-      span.appendChild(document.createTextNode(data.userhandle));
+      userHandleSpanTag.appendChild(document.createTextNode(data.userhandle));
       // get the already created h1 tag inside the name elment
       return (getElementByClassOrId("name").appendChild(
         // return (getElementByClassOrId("name").children[0].appendChild(
-        span
+        userHandleSpanTag
       ).className = "profile-handle");
     }
   };
@@ -35,11 +35,11 @@ const renderUserprofileData = (data) => {
   const renderUserBio = () => {
     if (data.bio) {
       // create  your elements
-      let [h2] = createElementCall(["H2"]);
+      let [headerTwo] = createElementCall(["H2"]);
       // attatch the user bio to the h2 tag
-      h2.appendChild(document.createTextNode(data.bio));
+      headerTwo.appendChild(document.createTextNode(data.bio));
       // attatch the h2 tag to my-profile-bio elemnt
-      return getElementByClassOrId("my-profile-bio").appendChild(h2);
+      return getElementByClassOrId("my-profile-bio").appendChild(headerTwo);
     }
   };
   renderUserBio();
@@ -48,13 +48,15 @@ const renderUserprofileData = (data) => {
   const renderUserAvater = () => {
     if (data.profileImage) {
       // create  your elements
-      let [img] = createElementCall(["IMG"]);
+      let [userAvatarImage] = createElementCall(["IMG"]);
       // assign the img a src and attatch the img to the profile-image element
-      return (getElementByClassOrId("profile-image").appendChild(img).src =
-        data.profileImage);
+      return (getElementByClassOrId("profile-image").appendChild(
+        userAvatarImage
+      ).src = data.profileImage);
     } else
-      return (getElementByClassOrId("profile-image").appendChild(img).src =
-        "../assets/me.jpg");
+      return (getElementByClassOrId("profile-image").appendChild(
+        userAvatarImage
+      ).src = "../assets/me.jpg");
   };
   renderUserAvater();
 
@@ -62,30 +64,34 @@ const renderUserprofileData = (data) => {
   const renderUserFoloowersCount = () => {
     if (data.followerCount && data.followerCount > 0) {
       // create  your elements
-      let [b, icon, iconWrap, a, conatiner] = createElementCall([
-        "B",
-        "DIV",
-        "DIV",
-        "A",
-        "DIV",
-      ]);
+      let [
+        followersCountBoldTag,
+        icon,
+        iconWrap,
+        followersCountLinkTag,
+        conatiner,
+      ] = createElementCall(["B", "DIV", "DIV", "A", "DIV"]);
       // create the followers icon
       icon.className = "followersicon";
       iconWrap.className = "followersicon-wrap";
       iconWrap.appendChild(icon);
       // append the count value to a b tag
-      b.appendChild(document.createTextNode(data.followerCount));
-      b.className = "following-count";
+      followersCountBoldTag.appendChild(
+        document.createTextNode(data.followerCount)
+      );
+      followersCountBoldTag.className = "following-count";
       //append the iconWrap, the b tag and follower text to the conatiner div tag
       conatiner.className = "flex followers followersOnly";
       conatiner.appendChild(iconWrap);
-      conatiner.appendChild(b);
+      conatiner.appendChild(followersCountBoldTag);
       conatiner.innerHTML += "followers";
       // append the conatiner div tag to the a tag
-      a.appendChild(conatiner);
-      a.href = "#";
+      followersCountLinkTag.appendChild(conatiner);
+      followersCountLinkTag.href = "#";
       // if the foloowerscount is > 0, render the followers count
-      return getElementByClassOrId("followings").appendChild(a);
+      return getElementByClassOrId("followings").appendChild(
+        followersCountLinkTag
+      );
     }
   };
   renderUserFoloowersCount();
@@ -94,21 +100,25 @@ const renderUserprofileData = (data) => {
   const renderUserFoloowingCount = () => {
     if (data.following && data.following > 0) {
       // create  your elements
-      let [b, a, div] = createElementCall(["B", "A", "DIV"]);
+      let [
+        followingCountTag,
+        followingCountLinkTag,
+        followingCountContainer,
+      ] = createElementCall(["B", "A", "DIV"]);
       // append the  following count to the b tag
-      b.appendChild(document.createTextNode(data.following));
-      b.className = "following-count";
+      followingCountTag.appendChild(document.createTextNode(data.following));
+      followingCountTag.className = "following-count";
       //create the anchor tag linking the 'following' and append a div to it
-      div.appendChild(b);
-      div.className = "flex followers following";
-      div.innerHTML += "following";
-      a.appendChild(div);
-      a.href = "#";
+      followingCountContainer.appendChild(followingCountTag);
+      followingCountContainer.className = "flex followers following";
+      followingCountContainer.innerHTML += "following";
+      followingCountLinkTag.appendChild(followingCountContainer);
+      followingCountLinkTag.href = "#";
 
       // if the foloowingCount is > 0, render the followers count
       return (
         (getElementByClassOrId("followings").innerHTML += "."),
-        getElementByClassOrId("followings").appendChild(a),
+        getElementByClassOrId("followings").appendChild(followingCountLinkTag),
         (getElementByClassOrId("followings").innerHTML += ".")
       );
     }
@@ -119,22 +129,28 @@ const renderUserprofileData = (data) => {
   const renderStarredRepos = () => {
     if (data.starredRepoCount && data.starredRepoCount > 0) {
       // create your elements
-      let [container, b, a] = createElementCall(["DIV", "B", "A"]);
+      let [
+        starredContainer,
+        starredBoldTag,
+        starredLinkTag,
+      ] = createElementCall(["DIV", "B", "A"]);
 
       // attatch the star count to a b tag
-      b.appendChild(document.createTextNode(data.starredRepoCount));
-      b.className = "following-count";
+      starredBoldTag.appendChild(
+        document.createTextNode(data.starredRepoCount)
+      );
+      starredBoldTag.className = "following-count";
 
       // attatch the star from component.js and the b tag to the container tag
-      container.append(star(), b);
-      container.className = "flex followers starred";
+      starredContainer.append(star(), starredBoldTag);
+      starredContainer.className = "flex followers starred";
 
       // attatch the conatiner to an a tag
-      a.appendChild(container);
-      a.href = "#";
+      starredLinkTag.appendChild(starredContainer);
+      starredLinkTag.href = "#";
 
       // if no of starred repos is > 0, return the starred count
-      return getElementByClassOrId("followings").appendChild(a);
+      return getElementByClassOrId("followings").appendChild(starredLinkTag);
     }
   };
   renderStarredRepos();
@@ -143,12 +159,12 @@ const renderUserprofileData = (data) => {
   const renderUserCompany = () => {
     if (data.company) {
       // create your elements
-      const [li, companyIconWrap, companyIcon, span] = createElementCall([
-        "LI",
-        "DIV",
-        "DIV",
-        "SPAN",
-      ]);
+      const [
+        companyListItem,
+        companyIconWrap,
+        companyIcon,
+        companyNameSpanTag,
+      ] = createElementCall(["LI", "DIV", "DIV", "SPAN"]);
 
       // create the company logo
       companyIconWrap.appendChild(companyIcon);
@@ -156,42 +172,42 @@ const renderUserprofileData = (data) => {
       companyIconWrap.className = "companyicon-wrap";
 
       // attatch the logo to the company name
-      span.appendChild(document.createTextNode(data.company));
-      li.append(companyIconWrap, span);
-      li.className = "flex";
+      companyNameSpanTag.appendChild(document.createTextNode(data.company));
+      companyListItem.append(companyIconWrap, companyNameSpanTag);
+      companyListItem.className = "flex";
 
       // return the li
       return getElementByClassOrId("location-details").children[0].appendChild(
-        li
+        companyListItem
       );
     }
   };
   renderUserCompany();
 
-  // render user
+  // render user location
   const renderUserLocation = () => {
     if (data.location) {
       // create your elements
-      const [companyIconWrap, companyIcon, span, li] = createElementCall([
-        "DIV",
-        "DIV",
-        "SPAN",
-        "LI",
-      ]);
+      const [
+        locationIconWrap,
+        locationIcon,
+        locationSpanTag,
+        locationListItem,
+      ] = createElementCall(["DIV", "DIV", "SPAN", "LI"]);
 
       // create the compay icon
-      companyIconWrap.appendChild(companyIcon);
-      companyIconWrap.className = "locationicon-wrap";
-      companyIcon.className = "locationicon";
+      locationIconWrap.appendChild(locationIcon);
+      locationIconWrap.className = "locationicon-wrap";
+      locationIcon.className = "locationicon";
 
       // attatch the icon and company name to an li
-      span.innerHTML = data.location;
-      li.append(companyIconWrap, span);
-      li.className = "flex";
+      locationSpanTag.innerHTML = data.location;
+      locationListItem.append(locationIconWrap, locationSpanTag);
+      locationListItem.className = "flex";
 
       // return the li
       return getElementByClassOrId("location-details").children[0].appendChild(
-        li
+        locationListItem
       );
     }
   };
@@ -199,18 +215,18 @@ const renderUserprofileData = (data) => {
 };
 
 // render repositories data
-
 const renderUserRepositories = (repos, data, callback) => {
   // check if there are any repos and create a ul for holding each repo content
   const renderReposStatus = () => {
     if (repos && repos.length > 0) {
       // create your elements
-      let [ul] = createElementCall(["UL"]);
-      ul.className = "repositories-list";
+      let [repositoryCollection] = createElementCall(["UL"]);
+      repositoryCollection.className = "repositories-list";
 
       // attach the ul to the repo body
-      getElementByClassOrId("repositories-list").appendChild(ul).className =
-        "repositories-ul";
+      getElementByClassOrId("repositories-list").appendChild(
+        repositoryCollection
+      ).className = "repositories-ul";
       return getElementByClassOrId("repositories-ul");
     }
   };
@@ -221,13 +237,13 @@ const renderUserRepositories = (repos, data, callback) => {
       repos.map((repo) => {
         // create your elements
         const [
-          li, //1
+          eachRepositoryCollection, //1
           repoDetails, //2
           repoNameMain, //3
-          h3, //4
+          eachRepositoryName, //4
           repName, //5
           repoDescription, //6
-          p, // 7
+          eachRepositoryDescription, // 7
           repoMore, //8
           language, //9
           starred, //10
@@ -272,14 +288,16 @@ const renderUserRepositories = (repos, data, callback) => {
         // create the repo name
         repName.appendChild(document.createTextNode(repo.name));
         repName.href = "#";
-        h3.appendChild(repName);
-        repoNameMain.appendChild(h3);
+        eachRepositoryName.appendChild(repName);
+        repoNameMain.appendChild(eachRepositoryName);
         repoNameMain.className = "repository-name";
 
         // create the repo description
         repo.description
-          ? (p.appendChild(document.createTextNode(repo.description)),
-            repoDescription.appendChild(p),
+          ? (eachRepositoryDescription.appendChild(
+              document.createTextNode(repo.description)
+            ),
+            repoDescription.appendChild(eachRepositoryDescription),
             (repoDescription.className = "repository-description"))
           : null;
 
@@ -361,9 +379,9 @@ const renderUserRepositories = (repos, data, callback) => {
         starMian.className = "star-main flex";
 
         // merge the entire repo li content
-        li.append(repoDetails, starMian);
-        li.className = "repository flex";
-        return renderReposStatus().appendChild(li);
+        eachRepositoryCollection.append(repoDetails, starMian);
+        eachRepositoryCollection.className = "repository flex";
+        return renderReposStatus().appendChild(eachRepositoryCollection);
       });
     }
   };
@@ -371,34 +389,32 @@ const renderUserRepositories = (repos, data, callback) => {
 };
 
 // display the number of repositories
-
 const renderNoOfRepos = (repos) => {
   if (repos && repos.length > 0) {
     // create your element
-    let [span] = createElementCall(["SPAN"]);
+    let [noOfReposSpanTag] = createElementCall(["SPAN"]);
 
     // attatch the repo count to the created span tag
-    span.appendChild(document.createTextNode(repos.length));
-    span.className = "repo-count";
+    noOfReposSpanTag.appendChild(document.createTextNode(repos.length));
+    noOfReposSpanTag.className = "repo-count";
 
     // set the span tag
-    return getElementByClassOrId("allRepository").appendChild(span);
+    return getElementByClassOrId("allRepository").appendChild(noOfReposSpanTag);
   }
 };
 
 // render user profile image and userhandle on the header
-
 const renderHeaderProfileImg = (data) => {
   // create your image element
-  const [img, imgMBOLE] = createElementCall(["IMG", "IMG"]);
-  img.src = data.profileImage || "../assets/me.jpg";
-  imgMBOLE.src = data.profileImage || "../assets/me.jpg";
+  const [userImageDesktop, userImageMobile] = createElementCall(["IMG", "IMG"]);
+  userImageDesktop.src = data.profileImage || "../assets/me.jpg";
+  userImageMobile.src = data.profileImage || "../assets/me.jpg";
 
   return (
     // return user profile image on the header on desktop view
-    getElementByClassOrId("menuProfileImgDTOP").appendChild(img),
+    getElementByClassOrId("menuProfileImgDTOP").appendChild(userImageDesktop),
     // return user profile image on the header on mobile view
-    getElementByClassOrId("menuProfileImgMOBLE").appendChild(imgMBOLE),
+    getElementByClassOrId("menuProfileImgMOBLE").appendChild(userImageMobile),
     // return userhandle on the header on mobile view
     getElementByClassOrId("menuProfileMOBLE").appendChild(
       document.createTextNode(data.userhandle)
@@ -426,4 +442,3 @@ const renderTabProfileOnScroll = (data) => {
 
   observer.observe(getElementByClassOrId("profileStick"));
 };
-
