@@ -1,5 +1,7 @@
 This project is a clone of github.
 
+Check the hosted site at https://bernarsgithubclone.netlify.app/
+
 ## Folder Structure
 
 ### The header
@@ -15,17 +17,19 @@ This project is a clone of github.
 
 ### Flexbox, Image and icon styles
 
--  `flex` and `pitureFrame`; [stlyes/box.css](./styles/box.css) file.
+- `flex` and `pitureFrame`; [stlyes/box.css](./styles/box.css) file.
 - All icons styles; [iconStyles](./iconStyles) directory.
 
 ### Data
+
 - Rendering data: [js/renderData.js](js/renderData.js)
 - Entry point data: [src/index.js](src/index.js)
 
 ### Modal
+
 - Dropdown styles: [styles/dropdown.css](styles/dropdown.css)
 
 ### tab
+
 - Tab styles: [styles/tabs.css](styles/tabs.css)
 - Tab functions: [js/tabs.js](js/tabs.js)
-
