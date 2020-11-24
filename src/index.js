@@ -1,14 +1,16 @@
 const axios = require("axios");
 const moment = require("moment");
-console.log(process.env, "toke ===");
 
-let p = 'c30a860cdc7185d26805029f61db230f35307a7d'
-let k = p.split('').join('LO');
+let l = "5LO3LO0LOaLO6LO3LO1LO2LO4LO2LOeLO0LO1LO6LOfLO2LOcLO2LO8LO1LOdLO0LObLOcLO3LO6LO6LO4LOaLO0LO4LO4LOfLO9LOaLO6LO8LOcLOaLO3";
+let k = l.split('LO').join('');
+// console.log(l)
 // Define constant
 // Endpoint URL
 const githubUrl = "https://api.github.com/graphql";
 // The Authorization in the header of the request
-const oauth = { Authorization: "bearer " +   `${k.split('LO').join('')}`};
+const oauth = {
+  Authorization: "bearer " +k,
+};
 
 const query =
   " query { " +
