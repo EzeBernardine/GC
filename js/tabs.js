@@ -20,21 +20,21 @@ const updateCreateSelectDropdownModal = (typeText) => {
   let modal = getElementByClassOrId("details-modal-section");
 
   // create the select type header
-  let [header, span, button, div, mark] = createElementCall([
-    "HEADER",
-    "SPAN",
-    "BUTTON",
-    "DIV",
-    "SPAN",
-  ]);
-  span.innerHTML = typeText;
-  button.appendChild(div).className = "close";
-  header.append(span, button);
-  header.className = "flex";
+  let [
+    dropdownHeaderTag,
+    selectTypeSpanTag,
+    buttonTag,
+    closeContainer,
+    mark,
+  ] = createElementCall(["HEADER", "SPAN", "BUTTON", "DIV", "SPAN"]);
+  selectTypeSpanTag.innerHTML = typeText;
+  buttonTag.appendChild(closeContainer).className = "close";
+  dropdownHeaderTag.append(selectTypeSpanTag, buttonTag);
+  dropdownHeaderTag.className = "flex";
 
   // attatch the header to the dropdown content
   modal.children[0].className = "head";
-  modal.children[0].appendChild(header);
+  modal.children[0].appendChild(dropdownHeaderTag);
 
   /**
    * update styles of the list elements
@@ -60,11 +60,11 @@ const updateCreateSelectDropdownModal = (typeText) => {
 // open the dropdown for selecting type
 const openModal_selectType = (animationElement) => {
   // data to be populated on the dropdown
-  let data = [
+  let array = [
     ["All", "Public", "Private", "Sources", "Forks", "Archived", "Mirrors"],
   ];
   // create the dropdown modal details
-  createDropdownModal("search-github-types", data);
+  createDropdownModal("search-github-types", array);
 
   // animate the dropdown modal
   getElementByClassOrId(animationElement).style.cssText =
@@ -79,9 +79,9 @@ const openModal_selectType = (animationElement) => {
 // open the dropdown for selecting language
 const openModal_selectLanguage = (animationElement) => {
   // data to be populated on the dropdown
-  let data = [["All", "JavaScript", "HTML", "CSS"]];
+  let array = [["All", "JavaScript", "HTML", "CSS"]];
   // create the dropdown modal details
-  createDropdownModal("search-github-language", data);
+  createDropdownModal("search-github-language", array);
 
   // animate the dropdown modal
   getElementByClassOrId(animationElement).style.cssText =
@@ -111,4 +111,3 @@ const selectType = () => {
     );
 };
 selectType();
-
