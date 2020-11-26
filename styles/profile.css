@@ -208,7 +208,7 @@
     margin-right: 16px;
     width: 16.66667%;
     position: unset;
-    display: inline-block;
+    display: inline-flex;
   }
   .github-profile
     .profile-container
