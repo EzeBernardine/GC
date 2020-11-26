@@ -147,7 +147,7 @@ const renderUserprofileData = (data) => {
 
       // attatch the conatiner to an a tag
       starredLinkTag.appendChild(starredContainer);
-      starredLinkTag.href = "#";
+      starredLinkTag.setAttribute("href", "/");
 
       // if no of starred repos is > 0, return the starred count
       return getElementByClassOrId("followings").appendChild(starredLinkTag);
@@ -287,7 +287,7 @@ const renderUserRepositories = (repos, data, callback) => {
         ]);
         // create the repo name
         repName.appendChild(document.createTextNode(repo.name));
-        repName.href = "#";
+        repName.setAttribute("href", "/");
         eachRepositoryName.appendChild(repName);
         repoNameMain.appendChild(eachRepositoryName);
         repoNameMain.className = "repository-name";
@@ -322,7 +322,10 @@ const renderUserRepositories = (repos, data, callback) => {
           ? ((starrCount.innerHTML = repo.stargazerCount),
             starred.appendChild(star()),
             // attatch the href  to the stars
-            (starred.href = `/${data.userhandle}/${repo.name}/stargazers`),
+            starred.setAttribute(
+              "href",
+              `/${data.userhandle}/${repo.name}/stargazers`
+            ),
             starred.appendChild(starrCount),
             repoMore.appendChild(starred))
           : null;
@@ -332,8 +335,11 @@ const renderUserRepositories = (repos, data, callback) => {
             fork.appendChild(forkIcon),
             (forkIcon.className = "forkIcon"),
             // attatch the href  to the stars
-            (fork.href = `/${data.userhandle}/${repo.name}/network/members
-            `),
+            fork.setAttribute(
+              "href",
+              `/${data.userhandle}/${repo.name}/network/members
+            `
+            ),
             fork.appendChild(forkCount),
             repoMore.appendChild(fork))
           : null;
